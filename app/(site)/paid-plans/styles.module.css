@@ -1,0 +1,13 @@
+/* Tailwind Utility Styles in CoachingPlansPage */
+.container {
+    @apply px-4;
+  }
+  
+  .grid {
+    @apply grid gap-6;
+  }
+  
+  img {
+    @apply w-full rounded-md;
+  }
+  
