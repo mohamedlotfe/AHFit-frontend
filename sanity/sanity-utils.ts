@@ -1,9 +1,18 @@
+"use server";
 import { createClient, groq } from "next-sanity";
+import { cookies } from "next/headers";
+
 import { Page, coachingPlan, Project, Transformation } from "@/types";
 import clientConfig from "./config/client-config";
 
 export async function fetchCoachingPlan(): Promise<coachingPlan[]> {
-  return createClient(clientConfig).fetch(
+  const userIsEditor: boolean =
+    cookies()
+      .getAll()
+      .find((c) => c.name === "sanityRole")?.value === "Editor";
+
+  const client = createClient({ ...clientConfig, useCdn: !userIsEditor });
+  return client.fetch(
     groq`*[_type == "coachingPlan"]{
     _id,
     title,
@@ -15,7 +24,13 @@ export async function fetchCoachingPlan(): Promise<coachingPlan[]> {
 
 // Fetch transformations from Sanity
 export async function getTransformations(): Promise<Transformation[]> {
-  return createClient(clientConfig).fetch(
+  const userIsEditor: boolean =
+    cookies()
+      .getAll()
+      .find((c) => c.name === "sanityRole")?.value === "Editor";
+
+  const client = createClient({ ...clientConfig, useCdn: !userIsEditor });
+  return client.fetch(
     groq`*[_type == "transformation"]{
       _id,
       _createdAt,
@@ -29,7 +44,13 @@ export async function getTransformations(): Promise<Transformation[]> {
   );
 }
 export async function getTransformation(slug: string): Promise<Transformation> {
-  return createClient(clientConfig).fetch(
+  const userIsEditor: boolean =
+    cookies()
+      .getAll()
+      .find((c) => c.name === "sanityRole")?.value === "Editor";
+
+  const client = createClient({ ...clientConfig, useCdn: !userIsEditor });
+  return client.fetch(
     groq`*[_type == "transformation" && slug.current == $slug][0]{
       _id,
       _createdAt,
