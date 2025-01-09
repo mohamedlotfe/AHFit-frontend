@@ -2,6 +2,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { getTransformation } from "../../../../sanity/sanity-utils";
 import Link from "next/link";
+import { ErrorBoundary } from "../../layout";
 
 type Props = {
   params: { project: string };
@@ -10,7 +11,7 @@ type Props = {
 export default async function TransformationPage({ params }: Props) {
   const slug = params.project;
   const transformation = await getTransformation(slug); // Assuming a function to fetch the transformation details
-
+  if (!transformation) return ErrorBoundary({ error: "No Transformation for this url" });
   return (
     <div>
       <header className="flex items-center justify-between">

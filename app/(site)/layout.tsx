@@ -13,7 +13,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="ar">
       <body className="bg-ligtGray text-whiteText max-w-5xl mx-auto py-10" suppressHydrationWarning={true}>
         {/* Header/Navbar */}
-        <header className="flex items-center justify-between px-5 py-4 bg-white shadow-md rounded-lg">
+        <header className="flex items-center justify-between px-5 py-4 bg-primary text-whiteText shadow-md rounded-lg">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <Image
@@ -28,15 +28,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </Link>
           </div>
 
-          <nav className="flex items-center gap-5 text-sm text-gray-600 font-bold ">
+          <nav className="flex items-center gap-5 text-sm text-whiteText font-bold ">
             {/* Static Navigation Links */}
-            <Link href="/contacts" className="hover:underline hover:text-gray-800 text-lg">
+            <Link href="/contacts" className="hover:underline hover:text-secondary text-lg">
               تواصل معنا
             </Link>
-            <Link href="/about" className="hover:underline hover:text-gray-800 text-lg">
+            <Link href="/about" className="hover:underline hover:text-secondary text-lg">
               عن المدرب
             </Link>
-            <Link href="/paid-plans" className="hover:underline hover:text-gray-800 text-lg">
+            <Link href="/paid-plans" className="hover:underline hover:text-secondary text-lg">
               البــاقـــات
             </Link>
           </nav>
@@ -49,5 +49,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <footer className="mt-20 text-center text-lg text-gray-500">© {new Date().getFullYear()} Ahmed Hussien. All rights reserved.</footer>
       </body>
     </html>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: Error | string }) {
+  // Render the custom error page in case of an error
+  return (
+    <div className="flex flex-col items-center justify-center h-screen bg-primary text-[#FFFFFF]">
+      <h2>Something went wrong!</h2>
+      <p>{typeof error === "string" ? error : error.message}</p>
+      <a href="/" className="inline-block px-6 py-3 text-white font-semibold rounded-md bg-secondary">
+        Go to Home
+      </a>
+    </div>
   );
 }

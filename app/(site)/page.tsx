@@ -28,7 +28,7 @@ export default async function Home() {
           </Link>
         </div>
         <div className="mt-5">
-          <h2 className="text-2xl font-bold text-lightText">Coach Ahmed Hussien</h2>
+          <h2 className="text-2xl font-bold text-primary">Coach Ahmed Hussien</h2>
           <p className="text-lg text-gray-600 font-semibold">Empowering Transformations</p>
         </div>
       </div>

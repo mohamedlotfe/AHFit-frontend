@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Contacts() {
+
   return (
     <div
       className="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white p-14"

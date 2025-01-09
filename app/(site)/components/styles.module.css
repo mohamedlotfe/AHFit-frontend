@@ -1,17 +1,17 @@
 .card {
-    display: block;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card img {
-    object-fit: cover;
-    padding-top: 7px;
-  }
-  
+  display: block;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  margin: 5px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  object-fit: cover;
+  padding-top: 7px;
+}

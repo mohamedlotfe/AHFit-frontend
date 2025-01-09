@@ -5,6 +5,15 @@ import Link from "next/link";
 import TransformationCard from "./TransformationCard";
 import { Transformation } from "../../../types";
 
+function SamplePrevArrow(props: { className?: any; style?: any; onClick?: any }) {
+  const { className, style, onClick } = props;
+  return <div className={className} style={{ ...style, display: "block", background: "black", "padding-top": "1px" }} onClick={onClick} />;
+}
+
+function SampleNextArrow(props: { className?: any; style?: any; onClick?: any }) {
+  const { className, style, onClick } = props;
+  return <div className={className} style={{ ...style, display: "block", background: "black", "padding-top": "1px" }} onClick={onClick} />;
+}
 const settings = {
   dots: true,
   infinite: true,
@@ -13,6 +22,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
+  prevArrow: <SamplePrevArrow />,
+  nextArrow: <SampleNextArrow />,
   responsive: [
     {
       breakpoint: 1024,
@@ -54,7 +65,7 @@ const TransformationSection = ({ transformations }: TransformationSectionProps) 
 
       <div className="flex justify-center mt-10">
         <Link href="https://tally.so/r/nWzOpR" target="_blank">
-          <button className="bg-secondary text-white px-6 py-2 rounded-lg text-lg shadow-lg hover:bg-red-800 ">اشترك الان</button>
+          <button className="bg-secondary text-white px-6 py-2 rounded-lg text-lg shadow-lg hover:bg-red-800 text-bold ">اشترك الان</button>
         </Link>
       </div>
     </div>
