@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FreePlansPage = () => {
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10 text-primary">
       {/* Main Title */}
       <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">البرامج المجانية</h1>
 
@@ -21,22 +21,20 @@ const FreePlansPage = () => {
             <a
               href="weight-loss-plan.pdf" // Replace with your actual file path
               download
-              className="inline-block px-6 py-3 text-white font-semibold rounded-md"
-              style={{ backgroundColor: "#fda72b" }}
+              className="inline-block px-6 py-3 text-white font-semibold rounded-md bg-secondary"
             >
               Download
             </a>
           </div>
 
           {/* Weight Gain Plan */}
-          <div className="flex-1 text-center">
+          <div className="flex-1 text-center ">
             <h3 className="text-xl font-medium mb-2">دايت زيادة الوزن المجاني</h3>
             <p className="text-sm text-gray-600 mb-4">(اضعط للتحميل)</p>
             <a
               href="weight-gain-plan.pdf" // Replace with your actual file path
               download
-              className="inline-block px-6 py-3 text-white font-semibold rounded-md"
-              style={{ backgroundColor: "#fda72b" }}
+              className="inline-block px-6 py-3 text-white font-semibold rounded-md bg-secondary"
             >
               Download
             </a>
@@ -56,8 +54,7 @@ const FreePlansPage = () => {
             href="https://t.me/Husseinfitt" // Replace with your actual Telegram group link
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 text-white font-semibold rounded-md"
-            style={{ backgroundColor: "#fda72b" }}
+            className="inline-block px-6 py-3 text-white font-semibold rounded-md bg-secondary"
           >
             Join Telegram
           </a>

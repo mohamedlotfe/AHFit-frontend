@@ -20,7 +20,7 @@ const CoachingPlansPage = async () => {
 
       {/* Button Section */}
       <div className="text-center mb-10">
-        <a href="https://tally.so/r/nWzOpR" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 text-white font-semibold rounded-md" style={{ backgroundColor: "#fda72b" }}>
+        <a href="https://tally.so/r/nWzOpR" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 text-white font-semibold rounded-md bg-secondary">
           إستمارة المتابعة أونلاين
         </a>
       </div>

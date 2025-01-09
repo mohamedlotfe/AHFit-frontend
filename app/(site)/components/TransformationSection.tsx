@@ -54,9 +54,7 @@ const TransformationSection = ({ transformations }: TransformationSectionProps) 
 
       <div className="flex justify-center mt-10">
         <Link href="https://tally.so/r/nWzOpR" target="_blank">
-          <button className="bg-red-700 text-white px-6 py-2 rounded-lg text-lg shadow-lg hover:bg-red-800" style={{ backgroundColor: "#fda72b" }}>
-            اشترك الان
-          </button>
+          <button className="bg-secondary text-white px-6 py-2 rounded-lg text-lg shadow-lg hover:bg-red-800 ">اشترك الان</button>
         </Link>
       </div>
     </div>

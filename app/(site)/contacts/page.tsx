@@ -44,9 +44,7 @@ export default function Contacts() {
 
       {/* Subscribe Button */}
       <Link href="https://tally.so/r/nWzOpR" target="_blank">
-        <button className="bg-red-700 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-red-800" style={{ backgroundColor: "#fda72b" }}>
-          اشترك الان
-        </button>
+        <button className="bg-secondary text-white px-6 py-3 rounded-lg text-lg text-bold shadow-lg hover:bg-red-800">اشترك الان</button>
       </Link>
     </div>
   );
